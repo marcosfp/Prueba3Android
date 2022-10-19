@@ -2,30 +2,26 @@ package com.example.prueba3.listaPuntuaciones
 
 import android.content.Context
 import android.os.Environment
+import com.example.prueba3.MainActivity
 import org.apache.commons.csv.CSVFormat
 import org.apache.commons.csv.CSVParser
 import org.apache.commons.csv.CSVPrinter
 import java.io.*
 import java.nio.file.Files
+import java.nio.file.Path
 
 class PuntuacionesProvider() {
 
 
-
     companion object {
 
-        private lateinit var context: Context
+        val storageDir =
+            File("/storage/emulated/0/Android/data/com.example.Prueba3/files/Documents")
 
-        fun setContext(con: Context) {
-            context=con
-        }
-
-        fun obtenerTodasLasPuntuaciones(): List<Puntuacion> {
-
-            val storageDir = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
+        fun obtenerTodasLasPuntuaciones(): MutableList<Puntuacion> {
 
             val listaPuntuacion: MutableList<Puntuacion> = listOf<Puntuacion>().toMutableList()
-            val ficheroCsv = File("$storageDir/puntuaciones.csv")
+            val ficheroCsv = File("${storageDir.path}/puntuaciones.csv")
             val ficheroExiste = ficheroCsv.exists()
 
             if (!ficheroExiste) {
@@ -45,10 +41,7 @@ class PuntuacionesProvider() {
         }
 
         fun escribirTodasLasPuntuaciones(puntuaciones: List<Puntuacion>) {
-
-            val storageDir = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
-
-            val ficheroCsv = File("$storageDir/puntuaciones.csv")
+            val ficheroCsv = File("${storageDir.path}/puntuaciones.csv")
             val ficheroExiste = ficheroCsv.exists()
 
             if (!ficheroExiste) {
@@ -69,14 +62,13 @@ class PuntuacionesProvider() {
 
         fun anadirCsv(puntuacion: Puntuacion) {
 
-            val storageDir = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
-            val ficheroCsv = File("$storageDir/puntuaciones.csv")
+            val ficheroCsv = File("${storageDir.path}/puntuaciones.csv")
             val ficheroExiste = ficheroCsv.exists()
 
             if (!ficheroExiste) {
                 ficheroCsv.createNewFile()
             }
-             val fileWriter = FileWriter(ficheroCsv,true)
+            val fileWriter = FileWriter(ficheroCsv, true)
             val csvPrinter = CSVPrinter(fileWriter, CSVFormat.EXCEL)
             if (!ficheroExiste) {
                 csvPrinter.printRecord("Nombre", "Nombre_Fichero")

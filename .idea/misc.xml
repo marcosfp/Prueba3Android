@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_escribir_nombre.xml" value="0.25" />
+        <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_profile.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_second.xml" value="0.2876712328767123" />
         <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_second2.xml" value="0.39010416666666664" />
         <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/activity_thrid.xml" value="0.4041666666666667" />
         <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/fragment_first.xml" value="0.1" />
-        <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/item_lista.xml" value="0.403125" />
+        <entry key="..\:/Users/madrid/AndroidStudioProjects/Prueba3/app/src/main/res/layout/item_lista.xml" value="0.1" />
       </map>
     </option>
   </component>

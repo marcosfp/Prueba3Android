@@ -33,14 +33,12 @@ class SecondActivity : AppCompatActivity() {
 
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
-        val textView = findViewById<TextView>(R.id.textoNombre).apply {
+        findViewById<TextView>(R.id.textoNombre).apply {
             text = message
         }
 
         val botonHacerFoto = findViewById<Button>(R.id.buttonFoto)
         botonHacerFoto.setOnClickListener { hacerFoto() }
-
-
 
         val listarPuntuaciones = Intent(this, ThridActivity::class.java).apply {
         }
@@ -91,7 +89,6 @@ class SecondActivity : AppCompatActivity() {
 
                 val textView = findViewById<TextView>(R.id.textoNombre)
                 val nombre = textView.text.toString()
-                PuntuacionesProvider.setContext(this)
                 PuntuacionesProvider.anadirCsv(Puntuacion(nombre,uri!!.lastPathSegment!!))
 
             } else {

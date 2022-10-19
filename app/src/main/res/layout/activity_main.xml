@@ -10,36 +10,46 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="588dp"
         android:text="@string/texto_titulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/editTextPersonName"
-        android:layout_width="212dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="73dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/input_nombre"
+    <Button
+        android:id="@+id/buttonFoto"
+        android:layout_width="160dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/input_button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonListarUsuarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonListarUsuarios"
+        android:layout_width="160dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:text="Listar Usuarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFoto" />
+
+    <Button
+        android:id="@+id/buttonObtenerNombre"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="226dp"
+        android:layout_marginBottom="50dp"
+        android:text="Escribir nombre"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:onClick="sendMessage"
-        android:text="@string/input_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
